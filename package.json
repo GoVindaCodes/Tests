@@ -87,7 +87,7 @@
     "tailwind:build": "cross-env NODE_ENV=production postcss src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
     "prestart": "npm run tailwind:dev",
     "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "build": "mkdir -p build && react-scripts --openssl-legacy-provider build",
     "prebuild": "set NODE_OPTIONS=--max-old-space-size=4096 && npm run tailwind:build",
     "analyze": "webpack-bundle-analyzer build/bundle-stats.json",
     "cz": "git-cz",
